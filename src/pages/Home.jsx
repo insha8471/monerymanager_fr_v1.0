@@ -1,8 +1,6 @@
 import { Coins, Wallet, WalletCards } from "lucide-react";
 import Dashboard from "../components/Dashboard";
-import InfoCard from "../components/Infocard";
 import { useUser } from "../hooks/useUser";
-import Filter from "./Filter";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axiosConfig from "../utils/axioConfig";
@@ -10,6 +8,7 @@ import { API_ENDPOINTS } from "../utils/apiEndpoints";
 import toast from "react-hot-toast";
 import RecentTransactions from "../components/RecentTransactions";
 import Transactions from "../components/Transactons";
+import Infocard from "../components/Infocard";
 
 const Home = () => {
     useUser();
@@ -45,21 +44,21 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* display the card */}
 
-                    <InfoCard 
+                    <Infocard
                         icon={<WalletCards />}
                         label="Total Balance"
                         value="10000"
                         color="bg-purple-800"
                     />
 
-                    <InfoCard 
+                    <Infocard 
                         icon={<Wallet />}
                         label="Total Income"
                         value="10000"
                         color="bg-green-800"
                     />
 
-                    <InfoCard 
+                    <Infocard
                         icon={<Coins />}
                         label="Total Expense"
                         value="10000"
