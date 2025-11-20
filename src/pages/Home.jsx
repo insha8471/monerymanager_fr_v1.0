@@ -8,7 +8,7 @@ import { API_ENDPOINTS } from "../utils/apiEndpoints";
 import toast from "react-hot-toast";
 import RecentTransactions from "../components/RecentTransactions";
 import Transactions from "../components/Transactons";
-import Infocard from "../components/Infocard";
+import InfoCardd from "../components/InfoCardd";
 
 const Home = () => {
     useUser();
@@ -44,21 +44,21 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* display the card */}
 
-                    <Infocard
+                    <InfoCardd
                         icon={<WalletCards />}
                         label="Total Balance"
                         value="10000"
                         color="bg-purple-800"
                     />
 
-                    <Infocard 
+                    <InfoCardd
                         icon={<Wallet />}
                         label="Total Income"
                         value="10000"
                         color="bg-green-800"
                     />
 
-                    <Infocard
+                    <InfoCardd
                         icon={<Coins />}
                         label="Total Expense"
                         value="10000"
