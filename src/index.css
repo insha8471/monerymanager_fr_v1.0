@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Outfit',sans-serif;
+  background-color: #fcfbfc;
+  overflow-x: hidden;
+}
+
+.card {
+    @apply bg-white p-5 rounded-xl shadow-sm border border-gray-200;
+}
+
+.card-btn {
+    @apply flex items-center gap-1 bg-gray-100 text-gray-700 
+           px-3 py-1.5 rounded-lg text-sm font-medium 
+           border border-gray-200 transition-all 
+           hover:bg-gray-200 hover:shadow-sm active:scale-95;
+}
