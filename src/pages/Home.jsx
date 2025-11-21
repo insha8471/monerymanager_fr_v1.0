@@ -76,7 +76,7 @@ const Home = () => {
 
                 {/* Income Transactons */}
                 <Transactions 
-                    transactions={dashboardData?.recentTransactions || []}
+                    transactions={(dashboardData?.recentTransactions || [])?.filter(t => t.type === "income")}
                     onMore={() => navigate("/income")}
                     type="income"
                     title="Recent Incomes"
@@ -84,7 +84,7 @@ const Home = () => {
 
                 {/* Expense Transactons */}
                 <Transactions 
-                    transactions={dashboardData?.recentTransactions || []}
+                    transactions={(dashboardData?.recentTransactions || [])?.filter(t => t.type === "expense")}
                     onMore={() => navigate("/expense")}
                     type="expense"
                     title="Recent Expense"
