@@ -8,6 +8,14 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { Toaster } from "react-hot-toast";
 
+const Root = () => {
+    const isAuthenticated = !!localStorage.getItem("token");
+    return isAuthenticated ? (
+        <Navigate to="/dashboard" />
+    ) : (
+        <Navigate to="/login" />
+    )
+}
 
 const App = () => {
     return (
@@ -26,15 +34,6 @@ const App = () => {
               </Routes>
           </BrowserRouter>
         </>
-    )
-}
-
-const Root = () => {
-    const isAuthenticated = !!localStorage.getItem("token");
-    return isAuthenticated ? (
-        <Navigate to="/dashboard" />
-    ) : (
-        <Navigate to="/login" />
     )
 }
 
