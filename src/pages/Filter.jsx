@@ -121,7 +121,7 @@ const Filter = () => {
                                 key={transaction.id}
                                 title={transaction.name}
                                 icon={transaction.icon}
-                                date={moment(transaction.data).format("Do MMM YYYY")}
+                                date={moment(transaction.date).format("Do MMM YYYY")}
                                 amount={transaction.amount}
                                 type={type}
                                 hideDeleteBtn
