@@ -14,7 +14,7 @@ const CustomLineChart = ({ data }) => {
                     <Line
                         type="monotone"
                         dataKey="amount"
-                        stroke="#7c3aed"      // purple color
+                        stroke="#7c3aed" 
                         strokeWidth={3}
                         dot={{ r: 4, fill: "#7c3aed" }}
                         activeDot={{ r: 6 }}
