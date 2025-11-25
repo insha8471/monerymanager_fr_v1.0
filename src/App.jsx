@@ -7,13 +7,14 @@ import Filter from "./pages/Filter";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { Toaster } from "react-hot-toast";
+import LandingPage from "./pages/LandingPage";
 
 const Root = () => {
     const isAuthenticated = !!localStorage.getItem("token");
     return isAuthenticated ? (
         <Navigate to="/dashboard" />
     ) : (
-        <Navigate to="/login" />
+        <Navigate to="/landingpage" />
     )
 }
 
@@ -31,7 +32,8 @@ const App = () => {
                   <Route path="/filter" element={<Filter />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
-              </Routes>
+                  <Route path="/landingpage" element={<LandingPage />} />
+                </Routes>
           </BrowserRouter>
         </>
     )

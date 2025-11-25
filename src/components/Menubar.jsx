@@ -16,7 +16,7 @@ const Menubar = () => {
         localStorage.clear(),
         clearUser(),
         setShowDropDown(false),
-        navigate("/login")
+        navigate("/")
     }
 
     useEffect(() => {
@@ -59,7 +59,7 @@ const Menubar = () => {
             <div className="relative" ref={dropDownRef}>
                     <button 
                     onClick={() => setShowDropDown(!showDropDown)}
-                    className="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2">
+                    className="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 cursor-pointer">
                         <User className="text-purple-500" />
 
                         {/* Dropdown menu */}
@@ -84,7 +84,7 @@ const Menubar = () => {
                                 <div className="py-1">
                                     <button 
                                     onClick={handleLogout}
-                                    className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transiton-colors duration-150">
+                                    className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transiton-colors duration-150 cursor-pointer">
                                         <LogOut className="w-4 h-4text-gray-500"/>
                                         <span>Logout</span>
                                     </button>
